@@ -28,13 +28,15 @@ body {
     display: flex;
     list-style: none;
     gap: 46px;
+
 }
-.header-navigation {
+.header {
     border-bottom: 1px solid #ececec;
     display: flex;
     align-items: center;
     padding-top: 24px;
     padding-bottom: 24px;
+
 }
 .header__logo--blue {
     font-family: "Raleway";
@@ -44,10 +46,11 @@ body {
 }
 .header__logo{
      padding-right: 90px;
-    text-decoration: none;
     color: #000000;
     font-size: 16px;
     font-weight: 500;
+   text-decoration: none;
+
 }
 .navigation__decoration-link{
     position: relative;
@@ -55,12 +58,14 @@ body {
     color: #000000;
     font-size: 16px;
     font-weight: 500;
+
 }
 .navigation__link{
     text-decoration: none;
     color: #000000;
     font-size: 16px;
     font-weight: 500;
+
 }
 .contact-links-header__item :hover,
 .contact-links-header__item :focus
@@ -112,7 +117,6 @@ body {
 }
 .main-content {
     display: block;
-    margin: auto;
     background-image: linear-gradient(to right, #2f303a66 40%, #2f303a66 40%),
         url(../images/p10.jpg);
     background-size: cover;
