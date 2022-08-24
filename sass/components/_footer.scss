@@ -1,0 +1,110 @@
+.footer{
+    display: flex;
+    align-items: baseline;
+}
+.page-footer{
+    background-color: $background-footer;
+}
+%cursor-footer{
+    cursor: pointer;
+}
+%animation-footer{
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.page-footer{
+    &__block{
+        padding-right: 70px;
+    }
+    &__navigation{
+        text-decoration: none;
+        color:$background-body;
+        fill:$background-body;
+        &__navigation:focus,
+        &__navigation:hover{
+            @extend %animation-footer;
+            color:$color-hover;
+        }
+}
+}
+.page-footer__logo{
+    display: inline-block;
+    font-weight: 700;
+    font-size: 26px;
+    padding-top: 60px;
+    padding-bottom: 20px;
+    &-blue{
+        color:$link;
+        font-weight: 700;
+        font-size: 26px;
+        font-family: "Raleway";
+    }
+}
+.page-footer__address{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    font-size: 14px;
+    padding-bottom: 9px;
+    letter-spacing: $letter-spacing-all;
+    color:$white;
+}
+.page-footer-contact{
+    &__item{
+        font-size: 14px;
+        list-style: none;
+        }
+        &__link{
+            width: 231px;
+            padding-bottom: 9px;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 14px;
+            line-height: 24px;
+            color:$font-contact-link;
+        }
+}
+.page-footer__title-newslestter{
+        margin-left:74px;
+
+}
+.page-footer{
+    &__input{
+        padding-left: 16px;
+        margin-top:20px;
+        width: 358px;
+        height: 50px;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+        border-radius: 4px;
+        background-color: $footer-input;
+        color:$background-body;
+        }
+        &__icon-send{
+            @include size (24px);
+            fill:$white;
+        }
+    }
+.page-footer-button__newsletter{
+    @extend %animation-footer;
+    @extend %cursor-footer;
+    background-color:$background-section;
+    letter-spacing: $letter-spacing-main-title;
+    width: 200px;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 30px;
+    margin-left: 12px;
+    transition-property: transform;
+
+    &:hover{
+        transform: scale(1.1);
+    }
+    &-text{
+        padding:10px 24px ;
+    }
+}

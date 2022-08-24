@@ -9,3 +9,7 @@
       @mixin fill ($color){
         fill:$color-icon-modal;
       }
+      @mixin padding ($size){
+        padding-top:$size;
+        padding-bottom:$size;
+      }
