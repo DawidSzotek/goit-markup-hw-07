@@ -1,0 +1,11 @@
+
+      @mixin position($position){
+        position: $position;
+      }
+      @mixin size ($size){
+        height: $size;
+        width:$size;
+      }
+      @mixin fill ($color){
+        fill:$color-icon-modal;
+      }

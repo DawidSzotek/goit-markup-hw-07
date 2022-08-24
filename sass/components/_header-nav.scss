@@ -19,6 +19,13 @@
         font-size:26px;
     }
 }
+
+
+%navigation__hover-animation{
+     color:$color-hover;
+     transition-duration:250ms;
+     transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
+}
 .navigation{
     display: flex;
     list-style:none;
@@ -26,17 +33,27 @@
 
     &__decoration-link{
         position: relative;
-        text-decoration: none;
+       text-decoration: none;
         color:$black;
         font-size:16px;
         font-weight:500;
         &:hover,
         :Focus{
-            color:$color-hover;
-            transition-duration:250ms;
-            transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
+          @extend %navigation__hover-animation;
+        }}
+        &__decoration-link::after{
+        content:"";
+         position:absolute;
+         width:53px;
+         height:4px;
+         top:46px;
+         left:0px;
+         background:$background-header-blue;
+         border-radius: 2px;
+         transition-duration: 250ms;
+         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
         }
-    }
+
     &__link{
         text-decoration: none;
         color:$black;
@@ -44,40 +61,41 @@
         font-weight:500;
         &:hover,
         :focus{
-            color:$color-hover;
-            transition-duration:250ms;
-            transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
+          @extend %navigation__hover-animation;
         }
     }
-
-
 }
-.contact-links-header{
+
+%contact-links-header__font-style{
     display: flex;
-    align-items: center;
-    list-style: none;
     font-size: 14px;
     line-height: 24px;
     color:$font-contact-link;
+    align-items: center;
+}
+%contact-links-header__hover-animation{
+     color:$color-hover;
+     transition-duration: 250ms;
+     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.contact-links-header{
+    list-style: none;
+    @extend %contact-links-header__font-style;
     padding-left: 345px;
     gap: 30px;
     &__item:hover,
     &__item:focus{
-        color:$color-hover;
+        @extend %contact-links-header__hover-animation;
+
+        
     }
 }
 .contact-links-header__links{
-    display: flex;
     text-decoration: none;
-    align-items: center;
-    font-size: 14px;
-    line-height: 24px;
-    color:$font-contact-link;
+    @extend %contact-links-header__font-style;
     &:focus,
     :hover{
-     color:$color-hover;
-     transition-duration: 250ms;
-     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+     @extend %contact-links-header__hover-animation;
     }
 }
 .contact-links-header{
