@@ -13,3 +13,8 @@
         padding-top:$size;
         padding-bottom:$size;
       }
+      @mixin bordered ($color , $size){
+        border-left:$size solid $color;
+        border-right:$size solid $color;
+        border-bottom:$size solid $color;
+      }

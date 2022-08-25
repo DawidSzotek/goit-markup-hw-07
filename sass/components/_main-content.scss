@@ -6,6 +6,7 @@
       transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .main-content{
+    margin:auto;
     display: block;
     background-image: linear-gradient(to right, #2f303a66 40%, #2f303a66 40%),
         url(../images/p10.jpg);
@@ -30,16 +31,17 @@
     width: 696px;
     }
     &__button{
-         font-family: "Roboto";
-         line-height: 30px;
-         font-weight: 700;
-         font-size: 16px;
-         color:$font-main-button-text;
-         text-align: center;
-         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-         border-radius: 4px;
-         border: none;
-         padding: 10px 41px 10px 42px;
+        font-family: "Roboto";
+        line-height: 30px;
+        background-color: $color-hover;
+        color:$font-main-button-text ;
+        font-weight: 700;
+        font-size: 16px;
+        text-align: center;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        border-radius: 4px;
+        border: none;
+        padding: 10px 41px 10px 42px;
     }
     &__button:hover{
         @extend %content__cursor-pointer;

@@ -85,8 +85,7 @@
     gap: 30px;
     &__item:hover,
     &__item:focus{
-        @extend %contact-links-header__hover-animation;
-
+        fill:$color-hover;
         
     }
 }
@@ -94,7 +93,7 @@
     text-decoration: none;
     @extend %contact-links-header__font-style;
     &:focus,
-    :hover{
+    &:hover{
      @extend %contact-links-header__hover-animation;
     }
 }

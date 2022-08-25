@@ -5,9 +5,9 @@
     z-index: 3;
     width:100%;
     height: 100%;
-    background-color:$background-modal;
-      transition: transform 600ms linear, visibility 600ms linear,
-        opacity 800ms linear;
+    background-color:rgba(0, 0, 0, 0.2);
+    transition: transform 600ms linear, visibility 600ms linear,
+    opacity 800ms linear;
 }
 
 .is-hidden{
@@ -61,19 +61,15 @@
                  @extend %modal__border-color;
                    }
       }
-      
-
  %modal__border-color{
      border: 1px solid rgba(33, 33, 33, 0.2);
 }
- 
-
     .modal{
       &__person-icon{
         @include size (12px);
         @include position (absolute);
         @include fill ($color-icon-modal);
-      top: 190px;
+      top: 110px;
       left: 60px;
       }
       &__phone-icon{
@@ -97,8 +93,6 @@
         margin-top: 20px;
       }
     }
-   
-
     %animation-color-hover{
       transition-duration: 250ms;
       transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -108,7 +102,6 @@
       border-radius: 2px;
     }
     
-
 .modal__form-box:focus + .modal__person-icon,
     .modal__form-box:focus + .modal__phone-icon,
     .modal__form-box:focus + .modal__mail-icon,

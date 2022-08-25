@@ -1,5 +1,5 @@
 
-.first-secion{
+.first-section{
     display: flex;
     justify-content: space-around;
     padding-top:94px;
@@ -49,8 +49,6 @@
         
     }
 }
-
-
 %second__title{
         font-family: "Roboto";
         font-weight: 700;
@@ -60,8 +58,8 @@
         padding-bottom: 50px;
 }
 
-
 .second-section{
+    
     &__list{
         display: flex;
         list-style: none;
@@ -77,27 +75,7 @@
         line-height: 1.14;
     }
 }
-%second-section{
-    position: absolute;
-    bottom: 0;
-    left:0;
-    right:0;
-    text-align: center;
-    line-height: 16px;
-    background: rgba(47, 48, 58, 0.8);
-    color:$background-body;
-    text-transform: uppercase;
-    padding:29px 90px;
-    letter-spacing:$letter-spacing-all;
-    font-size: 14px;
-     display: block;
-}
-.second-section__item{
-    @extend %second-section;
-    &-label{
-        @extend %second-section;
-    }
-}
+
 .section-three{
     @include padding (94px);
     display: flex;
@@ -202,17 +180,18 @@
         border:1px solid $color-icon;
         fill:$color-icon;
     }
+    
 }
-.fourth-section-client__list{
-    &:focus,
-    &:hover{
+.fourth-section-client{
+    &__item:focus,
+    &__item:hover{
         @extend %animation-body;
         @extend %cursor-pointer-body;
         fill:$background-section;
         border-color:$border-color-blue;
     }
 }
-.fifth-secion{
+.fifth-section{
     &__title{
         font-weight: 700;
         font-size: 14px;

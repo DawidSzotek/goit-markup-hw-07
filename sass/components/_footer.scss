@@ -91,6 +91,10 @@
     @extend %cursor-footer;
     background-color:$background-section;
     letter-spacing: $letter-spacing-main-title;
+    color:$color-title;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     width: 200px;
     border: none;
     border-radius: 4px;
@@ -100,11 +104,17 @@
     line-height: 30px;
     margin-left: 12px;
     transition-property: transform;
-
     &:hover{
         transform: scale(1.1);
     }
     &-text{
         padding:10px 24px ;
     }
+}
+.page-footer__input:hover{
+      transition-duration: 250ms;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      fill:$color-hover;
+      outline-color: $blue;
+      transition-property: outline-color, fill;
 }
