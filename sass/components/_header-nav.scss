@@ -1,9 +1,10 @@
 .header{
-    border-bottom:1px solid $border-ecec;
     display:flex;
     align-items: center;
     padding-top:24px;
     padding-bottom:24px;
+
+
 
     &__logo{
         padding-right:90px;
@@ -18,9 +19,12 @@
         font-weight:700;
         font-size:26px;
     }
+    &__page{
+    border-bottom:1px solid $border-ecec;
+
+    }
+  
 }
-
-
 %navigation__hover-animation{
      color:$color-hover;
      transition-duration:250ms;

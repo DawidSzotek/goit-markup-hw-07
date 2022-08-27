@@ -1,6 +1,4 @@
-%cursor{
-    cursor:pointer;
-}
+
 .main-overlay{
     @include position (absolute);
     @include size (100%);
@@ -17,6 +15,9 @@
         color:$white;
     }
 }
+%cursor{
+    cursor:pointer;
+}
 .main-overlay__list{
     display: flex;
     justify-content: space-around;
@@ -30,6 +31,7 @@
     margin: 0;
     overflow: hidden;
     &:hover{
+
         @extend %cursor;
         box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
          1px 4px 6px rgba(0, 0, 0, 0.16);
@@ -37,7 +39,7 @@
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     }
 }
-.main-overlay__item:hover{
+.main-overlay__item:hover .main-overlay{
    transform: translatex(0);
   background: rgba(33, 150, 243, 0.9);
   transition-duration: 250ms;
@@ -53,14 +55,16 @@
     &__name{
         font-weight: 700;
         font-size: 18px;
-        padding: 20px 24px 4px 24px;
+        padding-bottom:  8px 
     }
     &__description{
-        @include bordered (#eeeeee, 1px);
         color:$font-overlay;
         font-size: 16px;
-        padding: 4px 24px 20px 24px;
-
-
     }
+}
+.main-photo__description{
+        @include bordered( #eee, 1px);
+        padding: 20px 24px;
+
+
 }
