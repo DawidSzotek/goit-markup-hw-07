@@ -28,26 +28,26 @@
     list-style: none;
     justify-content: space-around;
     gap: 30px;
-    &__title{
+     &__title{
         font-weight: 700;
         font-size: 14px;
         line-height: 1.14;
-    }
-    &__text{
+     }
+     &__text{
         font-size: 14px;
         line-height: 1.71;
         padding-top: 10px;
-    }
+     }
 }
 .second-section{
     @include padding(94px);
     display: flex;
     justify-content: space-around;
     
-    &__title{
+     &__title{
         @extend %second__title;
         
-    }
+     }
 }
 %second__title{
         font-family: "Roboto";
@@ -59,21 +59,20 @@
 }
 
 .second-section{
-    
-    &__list{
+     &__list{
         display: flex;
         list-style: none;
         gap: 30px;
         justify-content: center;
-    }
-    &__item{
+     }
+     &__item{
         position:relative;
-    }
-    &__item-label{
+     }
+     &__item-label{
         font-weight: 500;
         font-size: 16px;
         line-height: 1.14;
-    }
+     }
 }
 .second-section__item-label{
     @include position (absolute);
@@ -95,10 +94,10 @@
     display: flex;
     justify-content: space-around;
     background-color: $background-section-three;
-    &__title{
+     &__title{
         @extend %second__title;
         display: block;
-    }
+     }
 }
 .section-three__team-list{
         display: flex;
@@ -106,7 +105,7 @@
         justify-content: space-between;
 }
 .section-three{
-    &__pictures{
+     &__pictures{
         border: 1px solid #eeeeee;
         margin: 0px;
         padding-bottom: 30px;
@@ -114,15 +113,15 @@
         box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
         0px 2px 1px rgba(0, 0, 0, 0.2);
         border-radius: 0px 0px 4px 4px;
-    }
-    &__pictures-name{
+     }
+     &__pictures-name{
         font-weight: 500;
         font-size: 16px;
         color:$background-color-body;
         text-align: center;
         padding-top: 30px;
-    }
-    &__pictures-description{
+     }
+     &__pictures-description{
         display:flex;
         margin-left: auto;
         margin-right: auto;
@@ -131,10 +130,10 @@
         width: 206px;
         padding-top: 16px;
         list-style: none;
-    }  
+     }  
 }
 .section-three-social{
-    &__network-menu{
+     &__network-menu{
         display:flex;
         margin-left: auto;
         margin-right: auto;
@@ -143,7 +142,7 @@
         width: 206px;
         padding-top: 16px;
         list-style: none;
-    }
+     }
 }
 .section-three-social__network-button-list{
     display: inline-flex;
@@ -152,17 +151,15 @@
     height: 44px;
     border-radius: 50%;
     fill:$color-icon;
-    &:hover,
-    &:focus,
-    &:active{
+     &:hover,
+     &:focus,
+     &:active{
         @extend %animation-body;
         @extend %cursor-pointer-body;
         background-color: $background-section;
         fill:$background-body;
-    }
+     }
 }
-
-
 %cursor-pointer-body{
     cursor:pointer;
 }
@@ -172,10 +169,10 @@
 }
 
 .fourth-section{
-    &__title{
+     &__title{
         @extend %second__title;
         display: block;
-    }
+     }
 }
 .fourth-section-client{
     &__list{
@@ -197,16 +194,16 @@
     
 }
 .fourth-section-client{
-    &__item:focus,
-    &__item:hover{
+     &__item:focus,
+     &__item:hover{
         @extend %animation-body;
         @extend %cursor-pointer-body;
         fill:$background-section;
         border-color:$border-color-blue;
-    }
+     }
 }
 .fifth-section{
-    &__title{
+     &__title{
         font-weight: 700;
         font-size: 14px;
         line-height: 1.14;
@@ -214,29 +211,29 @@
         text-transform: uppercase;
         color:$color-title;
         margin:0;
-    }
+     }
 }
 .fifth-section-socialmedia{
-    &__list{
+     &__list{
         display: inline-flex;
         padding-top: 20px;
         gap: 10px;
-    }
-    &__item{
+     }
+     &__item{
         @include size (44px);
         display: inline-flex;
         justify-content: center;
         align-items: center;
         border-radius: 50%;
         background: rgba(255, 255, 255, 0.1);
-    }
-    &__item:focus,
-    &__item:hover{
+     }
+     &__item:focus,
+     &__item:hover{
         @extend %animation-body;
         @extend %cursor-pointer-body;
         background-color:$background-section;
-    }
-    &__svg{
+     }
+     &__svg{
         fill:$color-socialmedia;
-    }
+     }
 }

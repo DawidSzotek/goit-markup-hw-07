@@ -33,12 +33,12 @@
     font-size: 26px;
     padding-top: 60px;
     padding-bottom: 20px;
-    &-blue{
+     &-blue{
         color:$link;
         font-weight: 700;
         font-size: 26px;
         font-family: "Raleway";
-    }
+     }
 }
 .page-footer__address{
     font-family: 'Roboto';
@@ -89,7 +89,7 @@
             @include size (24px);
             fill:$white;
         }
-    }
+}
 .page-footer-button__newsletter{
     @extend %animation-footer;
     @extend %cursor-footer;
