@@ -1,112 +1,126 @@
-.header{
+.header {
     display:flex;
     align-items: center;
     padding-top:24px;
     padding-bottom:24px;
 
-
-
-    &__logo{
+    &__logo {
         padding-right:90px;
         color:$logo-color-black;
         font-size:16px;
         font-weight:500;
         text-decoration: none;
     }
-    &__logo--blue{
+
+    &__logo--blue {
         font-family:"Raleway";
         color:$logo-color-blue;
         font-weight:700;
         font-size:26px;
     }
-    &__page{
-    border-bottom:1px solid $border-ecec;
 
+    &__page {
+        border-bottom:1px solid $border-ecec;
     }
-  
 }
-%navigation__hover-animation{
-     color:$color-hover;
-     transition-duration:250ms;
-     transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
+
+%navigation__hover-animation {
+    fill:$color-hover;
+    color:$color-hover;
+    transition-duration:250ms;
+    transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
 }
-.navigation{
+
+.navigation {
     display: flex;
     list-style:none;
     gap:46px;
 
-    &__decoration-link{
+    &__decoration-link {
         position: relative;
-       text-decoration: none;
-        color:$black;
-        font-size:16px;
-        font-weight:500;
-        &:hover,
-        :Focus{
-          @extend %navigation__hover-animation;
-        }}
-        &__decoration-link::after{
-        content:"";
-         position:absolute;
-         width:53px;
-         height:4px;
-         top:46px;
-         left:0px;
-         background:$background-header-blue;
-         border-radius: 2px;
-         transition-duration: 250ms;
-         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-    &__link{
         text-decoration: none;
         color:$black;
         font-size:16px;
         font-weight:500;
-        &:hover,
-        :focus{
-          @extend %navigation__hover-animation;
+
+    &:hover,
+    :Focus {
+        @extend %navigation__hover-animation;
+        }
+    }
+
+    &__decoration-link::after {
+        content:"";
+        position:absolute;
+        width:53px;
+        height:4px;
+        top:46px;
+        left:0px;
+        background:$background-header-blue;
+        border-radius: 2px;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    &__link {
+        text-decoration: none;
+        color:$black;
+        font-size:16px;
+        font-weight:500;
+
+    &:hover,
+    :focus {
+        @extend %navigation__hover-animation;
         }
     }
 }
-%contact-links-header__font-style{
+
+%contact-links-header__font-style {
     display: flex;
     font-size: 14px;
     line-height: 24px;
     color:$font-contact-link;
     align-items: center;
 }
-%contact-links-header__hover-animation{
-     color:$color-hover;
-     transition-duration: 250ms;
-     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+%contact-links-header__hover-animation {
+    color:$color-hover;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.contact-links-header{
+
+.contact-links-header {
     list-style: none;
     @extend %contact-links-header__font-style;
     padding-left: 345px;
     gap: 30px;
+
     &__item:hover,
-    &__item:focus{
+    &__item:focus {
         fill:$color-hover;
         
     }
 }
-.contact-links-header__links{
+
+.contact-links-header__links {
     text-decoration: none;
     @extend %contact-links-header__font-style;
+
     &:focus,
     &:hover{
-     @extend %contact-links-header__hover-animation;
+        @extend %contact-links-header__hover-animation;
     }
 }
-.contact-links-header{
-    &__style-icon{
+
+.contact-links-header {
+    
+    &__style-icon {
         display: flex;
     }
-    &__icon-header{
-         margin-right: 10px;
-         width: 16px;
-         height: 16px;
+
+    &__icon-header {
+        margin-right: 10px;
+        width: 16px;
+        height: 16px;
     }
 }

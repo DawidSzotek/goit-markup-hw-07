@@ -1,70 +1,78 @@
+.main-overlay {
+   @include position (absolute);
+   @include size (100%);
+   top:0;
+   left:0;  
+   transform: translateY(100%);
+   transition: transform 250ms;
+   padding:49px 45px 49px 24px;
 
-.main-overlay{
-    @include position (absolute);
-    @include size (100%);
-    top:0;
-    left:0;  
-    transform: translateY(100%);
-    transition: transform 250ms;
-    padding:49px 45px 49px 24px;
-     &__text{
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 28px;
-        letter-spacing: $letter-spacing-all;
-        color:$white;
-     }
+   &__text {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 28px;
+      letter-spacing: $letter-spacing-all;
+      color:$white;
+   }
 } 
+
 %cursor{
-    cursor:pointer;
+   cursor:pointer;
 }
-.main-overlay__list{
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    list-style: none;
-    gap: 30px;
-    padding-bottom: 94px;
-    }
-.main-overlay__item{
-    @include position (relative);
-    margin: 0;
-    overflow: hidden;
-     &:hover{
 
-        @extend %cursor;
-        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-         1px 4px 6px rgba(0, 0, 0, 0.16);
-        transition: box-shadow 250ms;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-     }
+.main-overlay__list {
+   display: flex;
+   justify-content: space-around;
+   flex-wrap: wrap;
+   list-style: none;
+   gap: 30px;
+   padding-bottom: 94px;
 }
-.main-overlay__item:hover .main-overlay{
+
+.main-overlay__item {
+   @include position (relative);
+   margin: 0;
+   overflow: hidden;
+
+   &:hover,
+   &:focus {
+      @extend %cursor;
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+      transition: box-shadow 250ms;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+   }
+}
+
+.main-overlay__item:hover .main-overlay {
    transform: translatex(0);
-  background: rgba(33, 150, 243, 0.9);
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+   background: rgba(33, 150, 243, 0.9);
+   transition-duration: 250ms;
+   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.main-overlay__container{
-    @include position (relative);
-    display: flex;
-    height: 294px;
-    overflow:hidden;
-}
-.main-product{
-     &__name{
-        font-weight: 700;
-        font-size: 18px;
-        padding-bottom:  8px 
-     }
-     &__description{
-        color:$font-overlay;
-        font-size: 16px;
-     }
-}
-.main-photo__description{
-        @include bordered( #eee, 1px);
-        padding: 20px 24px;
 
+.main-overlay__container {
+   @include position (relative);
+   display: flex;
+   height: 294px;
+   overflow:hidden;
+}
 
+.main-product {
+
+   &__name {
+      font-weight: 700;
+      font-size: 18px;
+      padding-bottom:  8px 
+   }
+
+   &__description {
+      color:$font-overlay;
+      font-size: 16px;
+   }
+}
+
+.main-photo__description {
+   @include bordered( #eee, 1px);
+   padding: 20px 24px;
 }

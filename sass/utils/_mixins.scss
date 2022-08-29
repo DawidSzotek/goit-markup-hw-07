@@ -1,20 +1,24 @@
 
-      @mixin position($position){
-        position: $position;
-      }
-      @mixin size ($size){
-        height: $size;
-        width:$size;
-      }
-      @mixin fill ($color){
-        fill:$color-icon-modal;
-      }
-      @mixin padding ($size){
-        padding-top:$size;
-        padding-bottom:$size;
-      }
-      @mixin bordered ($color , $size){
-        border-left:$size solid $color;
-        border-right:$size solid $color;
-        border-bottom:$size solid $color;
-      }
+@mixin position($position) {
+  position: $position;
+}
+
+@mixin size ($size){
+  height: $size;
+  width:$size;
+}
+
+@mixin fill ($color){
+  fill:$color-icon-modal;
+}
+
+@mixin padding ($size){
+  padding-top:$size;
+  padding-bottom:$size;
+}
+
+@mixin bordered ($color , $size){
+  border-left:$size solid $color;
+  border-right:$size solid $color;
+  border-bottom:$size solid $color;
+}

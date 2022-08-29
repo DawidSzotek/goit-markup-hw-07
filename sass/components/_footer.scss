@@ -1,46 +1,53 @@
-.footer{
+.footer {
     display: flex;
     align-items: baseline;
 }
-.page-footer{
+
+.page-footer {
     background-color: $background-footer;
 }
-%cursor-footer{
+%cursor-footer {
     cursor: pointer;
 }
-%animation-footer{
+
+%animation-footer {
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.page-footer{
-    &__block{
+
+.page-footer {
+    &__block {
         padding-right: 70px;
     }
-    &__navigation{
+
+    &__navigation {
         text-decoration: none;
         color:$background-body;
         fill:$background-body;
+
         &__navigation:focus,
-        &__navigation:hover{
+        &__navigation:hover {
             @extend %animation-footer;
             color:$color-hover;
         }
+    }
 }
-}
-.page-footer__logo{
+
+.page-footer__logo {
     display: inline-block;
     font-weight: 700;
     font-size: 26px;
     padding-top: 60px;
     padding-bottom: 20px;
-     &-blue{
+
+    &-blue {
         color:$link;
         font-weight: 700;
         font-size: 26px;
         font-family: "Raleway";
-     }
+    }
 }
-.page-footer__address{
+.page-footer__address {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
@@ -50,31 +57,31 @@
     letter-spacing: $letter-spacing-all;
     color:$white;
 }
-.page-footer-contact{
-    &__item{
+.page-footer-contact {
+    &__item {
         font-size: 14px;
         list-style: none;
-        }
-        &__link{
-            padding-bottom: 9px;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 14px;
-            line-height: 24px;
-            color:$font-contact-link;
-        }
-        &__link:focus,
-        &__link:hover{
-            @extend %animation-footer;
-            color:$color-hover;
-        }
+    }
+    &__link {
+        padding-bottom: 9px;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 14px;
+        line-height: 24px;
+        color:$font-contact-link;
+    }
+    &__link:focus,
+    &__link:hover {
+        @extend %animation-footer;
+        color:$color-hover;
+    }
 }
-.page-footer__title-newslestter{
-        margin-left:74px;
+.page-footer__title-newslestter {
+     margin-left:74px;
 
 }
-.page-footer{
-    &__input{
+.page-footer {
+    &__input {
         padding-left: 16px;
         margin-top:20px;
         width: 358px;
@@ -84,13 +91,15 @@
         border-radius: 4px;
         background-color: $footer-input;
         color:$background-body;
-        }
-        &__icon-send{
-            @include size (24px);
-            fill:$white;
-        }
+    }
+
+    &__icon-send {
+        @include size (24px);
+        fill:$white;
+    }
 }
-.page-footer-button__newsletter{
+
+.page-footer-button__newsletter {
     @extend %animation-footer;
     @extend %cursor-footer;
     background-color:$background-section;
@@ -108,17 +117,21 @@
     line-height: 30px;
     margin-left: 12px;
     transition-property: transform;
-    &:hover{
+
+    &:hover,
+    &:focus {
         transform: scale(1.1);
     }
-    &-text{
+
+    &-text {
         padding:10px 24px ;
     }
 }
-.page-footer__input:hover{
-      transition-duration: 250ms;
-      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-      fill:$color-hover;
-      outline-color: $blue;
-      transition-property: outline-color, fill;
+.page-footer__input:hover,
+.page-footer__input:focus {
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    fill:$color-hover;
+    outline-color: $blue;
+    transition-property: outline-color, fill;
 }

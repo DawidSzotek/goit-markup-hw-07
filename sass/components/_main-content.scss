@@ -1,29 +1,32 @@
-.main-content{
+.main-content {
     margin:auto;
     display: block;
     background-image: linear-gradient(to right, #2f303a66 40%, #2f303a66 40%),
-        url(../images/p10.jpg);
+    url(../images/p10.jpg);
     background-size: cover;
-    &__box{
+
+    &__box {
         display: block;
-    text-align: center;
-    padding-top: 200px;
-    padding-bottom: 280px;
+        text-align: center;
+        padding-top: 200px;
+        padding-bottom: 280px;
     }
-    &__header{
-          display: flex;
-    font-family: "Roboto";
-    font-weight: 900;
-    font-size: 44px;
-    margin: auto;
-    justify-content: space-around;
-    text-transform: uppercase;
-    color:$font-color-title;
-    padding-bottom: 30px;
-    letter-spacing:$letter-spacing-main-title;
-    width: 696px;
+
+    &__header {
+        display: flex;
+        font-family: "Roboto";
+        font-weight: 900;
+        font-size: 44px;
+        margin: auto;
+        justify-content: space-around;
+        text-transform: uppercase;
+        color:$font-color-title;
+        padding-bottom: 30px;
+        letter-spacing:$letter-spacing-main-title;
+        width: 696px;
     }
-    &__button{
+
+    &__button {
         font-family: "Roboto";
         line-height: 30px;
         background-color: $color-hover;
@@ -36,16 +39,18 @@
         border: none;
         padding: 10px 41px 10px 42px;
     }
-    &__button:hover{
+
+    &__button:hover {
         @extend %content__cursor-pointer;
         @extend %animation__body;
-
     }
 }
-%content__cursor-pointer{
+
+%content__cursor-pointer {
     cursor:pointer;
 }
-%animation__body{
-      transition-duration: 250ms;
-      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+%animation__body {
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
